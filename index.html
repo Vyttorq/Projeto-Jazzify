@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jazz Player</title>
+  <!-- Ligando o CSS com estilo daora -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="player-container">
+    <header>
+      <h1>Jazzify</h1> <!-- Nome da plataforma, bem Spotify feeling -->
+    </header>
+
+    <!-- Playlist com faixas lendárias -->
+    <div class="playlist">
+      <ul>
+        <li id="track-1">
+          <span class="track-name">Autumn Leaves - Chet Baker</span>
+          <span class="track-duration">05:20</span>
+          <span class="track-date">17 de Jul. 1957</span>
+        </li>
+        <li id="track-2">
+          <span class="track-name">Take Five - Dave Brubeck</span>
+          <span class="track-duration">05:24</span>
+          <span class="track-date">12 de Ago. 1959</span>
+        </li>
+        <li id="track-3">
+          <span class="track-name">So What - Miles Davis</span>
+          <span class="track-duration">09:22</span>
+          <span class="track-date">01 de Set. 1959</span>
+        </li>
+        <li id="track-4">
+          <span class="track-name">My Favorite Things - John Coltrane</span>
+          <span class="track-duration">05:43</span>
+          <span class="track-date">27 de Jun. 1961</span>
+        </li>
+        <li id="track-5">
+          <span class="track-name">Blue in Green - Bill Evans</span>
+          <span class="track-duration">05:29</span>
+          <span class="track-date">17 de Fev. 1959</span>
+        </li>
+        <li id="track-6">
+          <span class="track-name">Misty - Erroll Garner</span>
+          <span class="track-duration">03:45</span>
+          <span class="track-date">14 de Nov. 1954</span>
+        </li>
+        <li id="track-7">
+          <span class="track-name">In a Sentimental Mood - Duke Ellington</span>
+          <span class="track-duration">04:39</span>
+          <span class="track-date">27 de Dez. 1935</span>
+        </li>
+        <li id="track-8">
+          <span class="track-name">All the Things You Are - Ella Fitzgerald</span>
+          <span class="track-duration">04:12</span>
+          <span class="track-date">12 de Abr. 1956</span>
+        </li>
+        <li id="track-9">
+          <span class="track-name">Moanin' - Art Blakey</span>
+          <span class="track-duration">07:34</span>
+          <span class="track-date">07 de Mar. 1958</span>
+        </li>
+        <li id="track-10">
+          <span class="track-name">Round Midnight - Thelonious Monk</span>
+          <span class="track-duration">06:10</span>
+          <span class="track-date">11 de Ago. 1957</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Controles do player -->
+    <div class="controls">
+      <button onclick="prevTrack()">⏮</button>
+      <button onclick="playPause()">⏯</button>
+      <button onclick="nextTrack()">⏭</button>
+    </div>
+
+    <!-- Barra de progresso fake, só pra simular -->
+    <input type="range" id="progressBar" value="0" min="0" max="100"/>
+
+    <!-- Controle de volume vertical, tipo mixer mesmo -->
+    <div class="volume-container">
+      <input type="range" id="volumeSlider" min="0" max="100" value="50" />
+    </div>
+  </div>
+
+  <!-- Ligando o JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

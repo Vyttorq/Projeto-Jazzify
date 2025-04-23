@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #1e1e1e, #2c2c2c);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .player-container {
+    background-color: #121212;
+    padding: 30px;
+    border-radius: 15px;
+    width: 95%;
+    max-width: 1200px;
+    height: 90vh;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #1db954;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #1db954;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #1ed760;
+    transform: scale(1.05);
+  }
+  
+  #progressBar {
+    width: 80%;
+    height: 8px;
+    border-radius: 10px;
+    margin: 0 auto 20px;
+    background-color: #444;
+    -webkit-appearance: none;
+    display: block;
+  }
+  
+  #progressBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+  }
+  
+  .playlist {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .playlist::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .playlist::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 4px;
+  }
+  
+  .playlist ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .playlist li {
+    padding: 16px;
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .playlist li:hover {
+    background-color: #2a2a2a;
+  }
+  
+  .playlist li.playing {
+    background-color: #1db954;
+    color: #121212;
+    font-weight: bold;
+  }
+  
+  .playlist .track-name {
+    display: inline-block;
+    width: 50%;
+  }
+  
+  .playlist .track-duration {
+    color: #888;
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .playlist .track-date {
+    color: #888;
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+  }
+  
+  .volume-container {
+    width: 40px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+  
+  #volumeSlider {
+    writing-mode: bt-lr;
+    -webkit-appearance: slider-vertical;
+    width: 8px;
+    height: 100px;
+    accent-color: #1db954;
+  }
+  
